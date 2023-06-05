@@ -1,0 +1,71 @@
+<app-navbar></app-navbar>
+<h1 style="padding-top: 2%;padding-left: 42%;font-family: 'Times New Roman', Times, serif;color: #66347F;">{{p.title}}</h1>
+<div class="card" style="padding-top: 3%;">
+    <p-splitter [style]="{'height': '400px'}" [panelSizes]="[20,80]" [minSizes]="[10,0]" styleClass="mb-5">
+        <ng-template pTemplate>
+            <div class="col flex align-items-center justify-content-center">
+                <img src="assets/images/{{p.images}}" width="250px" height="300px"><br>
+            </div>
+        </ng-template>
+        <ng-template pTemplate>
+            <p-splitter layout="vertical" [panelSizes]="[15,85]" styleClass="mb-5" >
+                <ng-template pTemplate>
+                    <div style="flex-grow: 1;" class="flex align-items-center justify-content-left">
+                        <p style="padding-left: 3%;font-weight: bold;font-size: 20px;font-family: 'Times New Roman', Times, serif;color:#9E4784;">{{p.subtitle}}</p>
+                    </div>
+                </ng-template>
+                <ng-template pTemplate>
+                    <p-splitter [panelSizes]="[70,30]">
+                        <ng-template pTemplate>
+                            <div class="col align-items justify-content-left">
+                                <div class="product-list-detail" style="padding: 3%;">
+                                    <div class="product-description"><strong
+                                            style="color:#37306B;font-size: 25px;font-family: 'Times New Roman', Times, serif;padding-right: 1%;">Description:</strong>{{p.description}}
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+                        <ng-template pTemplate>
+                            <div class="col align-items justify-content-left">
+                                <div class="product-list-detail" style="padding: 3%;">
+                                    <ul>
+                                        <li style="padding-bottom: 3%;">
+                                            <div class="product-Auth"><strong
+                                                    style="color: #b14557;font-size: 20px;font-family: 'Times New Roman', Times, serif;">Auteur:  </strong>{{p.author}}
+                                            </div>
+                                        </li>
+                                        <li style="padding-bottom: 3%;">
+                                            <div class="product-category"><strong
+                                                    style="color: #b14557;font-size: 20px;font-family: 'Times New Roman', Times, serif;padding-right: 1%;">Categorie: </strong>{{p.category}}
+                                            </div>
+                                        </li>
+                                        <li style="padding-bottom: 3%;">
+                                            <div class="product-nbPages"><strong
+                                                    style="color: #b14557;font-size: 20px;font-family: 'Times New Roman', Times, serif;padding-right: 1%;">Nombres
+                                                    des pages: </strong>{{p.pageCount}}</div>
+                                        </li>
+                                        <li style="padding-bottom: 3%;">
+                                            <div class="product-date"><strong
+                                                    style="color: #b14557;font-size: 20px;font-family: 'Times New Roman', Times, serif;padding-right: 1%;">Date
+                                                    de publication: </strong>{{p.publishedDate}}</div>
+                                        </li>
+                                        <li style="padding-bottom: 3%;">
+                                            <div class="product-lg"><strong
+                                                    style="color: #b14557;font-size: 20px;font-family: 'Times New Roman', Times, serif;padding-right: 1%;">Language: </strong><span *ngIf="p.language=='en'">Anglais</span><span *ngIf="!(p.language=='en')">Français</span>
+                                            </div>
+                                        </li>
+                                        <li style="padding-bottom: 3%;">
+                                            <div class="product-price"><strong
+                                                    style="color: #b14557;font-size: 20px;font-family: 'Times New Roman', Times, serif;padding-right: 1%;">Prix: </strong>{{p.price}}
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </p-splitter>
+                </ng-template>
+            </p-splitter>
+        </ng-template>
+    </p-splitter>
+</div>

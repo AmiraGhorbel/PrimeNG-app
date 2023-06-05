@@ -1,0 +1,13 @@
+{
+    "data":[
+        {
+            "images":"assets/images/carousel-1.jpg"
+        },
+        {
+            "images":"assets/images/carousel-2.jpg"
+        },
+        {
+            "images":"assets/images/carousel-3.jpg"
+        }
+    ]
+}
